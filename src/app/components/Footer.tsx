@@ -1,4 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,24 +11,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-[var(--green-primary)] flex items-center justify-center">
-                <span
-                  className="text-white text-lg font-light"
-                  style={{ fontFamily: "var(--font-cormorant)" }}
-                >
-                  H
-                </span>
-              </div>
+              
               <div>
-                <div
-                  className="text-white font-serif text-lg leading-tight"
-                  style={{ fontFamily: "var(--font-cormorant)" }}
-                >
-                  Hrala
-                </div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-[var(--green-light)]">
-                  Centar dentalne medicine
-                </div>
+                <Link href="/" className="flex items-center gap-3">
+            <div className="w-[270px] max-[600px]:w-[250px]">
+              <Image src="/hrala-logo.png" width={300} height={300} alt="Hrala logo" className="!w-full !h-auto" />
+            </div>
+          </Link>
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-8">
@@ -56,22 +47,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                "Estetska stomatologija",
-                "Implantologija",
-                "Estetika lica",
-                "Oralna kirurgija",
-                "Protetika",
-                "Parodontologija",
-                "Prevencija i RTG",
-                "Restaurativna stomatologija",
-                "Ortodoncija",
+                { label: "Estetska stomatologija", id: "estetska-stomatologija" },
+                { label: "Implantologija", id: "implantologija" },
+                { label: "Estetika lica", id: "estetika-lica" },
+                { label: "Oralna kirurgija", id: "oralna-kirurgija" },
+                { label: "Protetika", id: "protetika" },
+                { label: "Parodontologija", id: "parodontologija" },
+                { label: "Prevencija i RTG", id: "prevencija-rtg" },
+                { label: "Restaurativna stomatologija", id: "restaurativna-stomatologija" },
+                { label: "Ortodoncija", id: "ortodoncija" },
               ].map((s) => (
-                <li key={s}>
+                <li key={s.id}>
                   <a
-                    href="#services"
+                    href={`/usluge#${s.id}`}
                     className="text-white/50 hover:text-[var(--green-light)] transition-colors"
                   >
-                    {s}
+                    {s.label}
                   </a>
                 </li>
               ))}
@@ -85,11 +76,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               {[
-                ["Naslovnica", "#"],
-                ["O nama", "#about"],
-                ["Galerija", "#gallery"],
-                ["360° Virtualna šetnja", "#virtual"],
-                ["Kontakt", "#contact"],
+                ["Naslovnica", "/"],
+                ["O nama", "/o-nama"],
+                ["Galerija", "/galerija"],
+                ["360° Virtualna šetnja", "/galerija#virtual"],
+                ["Kontakt", "/kontakt"],
               ].map(([label, href]) => (
                 <li key={label}>
                   <a
@@ -102,14 +93,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h4 className="text-xs uppercase tracking-widest text-[var(--green-light)] mb-4 mt-8">
-              Jezik
-            </h4>
-            <div className="flex gap-4 text-sm">
-              <a href="#" className="text-white font-medium">HR</a>
-              <a href="#" className="text-white/40 hover:text-white transition-colors">EN</a>
-              <a href="#" className="text-white/40 hover:text-white transition-colors">IT</a>
-            </div>
+            
           </div>
 
           {/* Contact */}

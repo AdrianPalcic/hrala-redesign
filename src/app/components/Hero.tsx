@@ -17,7 +17,7 @@ const slides = [
     heading: "Moderna medicina,\ntopla briga",
     subtext:
       "Trudimo se biti u skladu s razvojem i napretkom struke kroz stalne edukacije i stručna usavršavanja.",
-    bg: "from-[#1f4f3a]/80 to-[#2a7d58]/40",
+    bg: "from-[#1f4f3a]/80 to-[#b5c533]/40",
     imgUrl:
       "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1800&q=80",
   },
@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen min-h-[700px] flex items-end overflow-hidden"
+      className="relative h-screen mt-10 sm:mt-0 min-h-[700px] flex items-end overflow-hidden"
     >
       {/* Background image */}
       {slides.map((s, i) => (

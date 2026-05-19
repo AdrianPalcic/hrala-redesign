@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const pillars = [
   "Kontinuirano stručno usavršavanje",
@@ -139,9 +140,9 @@ export default function About() {
               ))}
             </ul>
 
-            <a href="#contact" className="btn-primary">
+            <Link href="/o-nama" className="btn-primary">
               Upoznajte nas <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
+    id: "estetska-stomatologija",
     number: "01",
     title: "Estetska stomatologija",
     description:
@@ -12,6 +14,7 @@ const services = [
       "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
   },
   {
+    id: "implantologija",
     number: "02",
     title: "Implantologija",
     description:
@@ -20,6 +23,7 @@ const services = [
       "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
   },
   {
+    id: "estetika-lica",
     number: "03",
     title: "Estetika lica",
     description:
@@ -28,6 +32,7 @@ const services = [
       "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
   },
   {
+    id: "oralna-kirurgija",
     number: "04",
     title: "Oralna kirurgija",
     description:
@@ -36,6 +41,7 @@ const services = [
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
   },
   {
+    id: "protetika",
     number: "05",
     title: "Protetika",
     description:
@@ -44,6 +50,7 @@ const services = [
       "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80",
   },
   {
+    id: "parodontologija",
     number: "06",
     title: "Parodontologija",
     description:
@@ -52,6 +59,7 @@ const services = [
       "https://images.unsplash.com/photo-1609840113589-b30e58eba19c?w=800&q=80",
   },
   {
+    id: "prevencija-rtg",
     number: "07",
     title: "Prevencija i RTG",
     description:
@@ -60,6 +68,7 @@ const services = [
       "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&q=80",
   },
   {
+    id: "restaurativna-stomatologija",
     number: "08",
     title: "Restaurativna stomatologija",
     description:
@@ -68,6 +77,7 @@ const services = [
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
   },
   {
+    id: "ortodoncija",
     number: "09",
     title: "Ortodoncija",
     description:
@@ -129,8 +139,9 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100">
           {services.map((service, i) => (
-            <div
+            <Link
               key={service.number}
+              href={`/usluge#${service.id}`}
               className={`reveal delay-${Math.min((i % 3) * 100 + 100, 300)} bg-white group cursor-pointer overflow-hidden`}
             >
               {/* Image */}
@@ -169,7 +180,7 @@ export default function Services() {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
