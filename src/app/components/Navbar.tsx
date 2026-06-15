@@ -128,7 +128,7 @@ export default function Navbar() {
             </Link>
 
             <Link href="/kontakt" className="btn-primary text-xs py-3 px-5">
-              Zakažite termin
+              Dogovorite termin
             </Link>
           </nav>
 
@@ -191,7 +191,7 @@ export default function Navbar() {
               <Phone size={16} /> 01/2916-814
             </a>
             <Link href="/kontakt" className="btn-outline justify-center" onClick={() => setMenuOpen(false)}>
-              Zakažite termin
+              Dogovorite termin
             </Link>
           </div>
 

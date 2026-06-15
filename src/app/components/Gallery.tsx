@@ -93,8 +93,7 @@ export default function Gallery() {
                 fontFamily: "var(--font-cormorant)",
               }}
             >
-              Naša ordinacija &amp;<br />
-              <span className="text-[var(--green-primary)] italic">vaši osmijesi</span>
+              Naša ordinacija 
             </h2>
           </div>
           <p className="reveal delay-200 text-gray-500 max-w-xs leading-relaxed">

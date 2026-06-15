@@ -393,7 +393,7 @@ export default function GalleryPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-10 relative reveal">
           <div>
-            <p className="section-label mb-4">Zakažite termin</p>
+            <p className="section-label mb-4">Dogovorite termin</p>
             <h2
               className="heading-serif text-white"
               style={{

@@ -4,37 +4,21 @@ import { CheckCircle, ArrowRight, Phone } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const teamMembers = [
-  {
-    name: "Mr.sc. Zvonimir Hrala",
-    role: "dr.med.dent",
-    title: "Osnivač & Vlasnik",
-    imgUrl: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80",
-  },
-  {
-    name: "Elizabeta Šarčević",
-    role: "dr.med.dent",
-    title: "Estetska stomatologija & Protetika",
-    imgUrl: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80",
-  },
-  {
-    name: "Vlatko Pavišić",
-    role: "dr.med.dent",
-    title: "Implantologija & Oralna kirurgija",
-    imgUrl: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80",
-  },
-  {
-    name: "Bruno Štimac",
-    role: "dr.med.dent",
-    title: "Parodontologija & Ortodoncija",
-    imgUrl: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80",
-  },
-  {
-    name: "Andrea Vlahović",
-    role: "Dentalna asistentica",
-    title: "Koordinatorica pacijenata",
-    imgUrl: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80",
-  },
+const doctors = [
+  { name: "Mr. sc. Zvonimir Hrala", role: "dr. med. dent.", title: "Osnivač & Vlasnik", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Karla Hrala", role: "dr. med. dent.", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Tea Zadravec", role: "dr. med. dent.", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Elizabeta Šarčević", role: "dr. med. dent.", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Bruno Štimac", role: "dr. med. dent.", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+];
+
+const assistants = [
+  { name: "Draženka Horvat", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Marta Radušić", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Marija Barišić", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Ana Berišić", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Jelena Ćuro", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Mateo Deže", role: "Dentalni asistent", title: "", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
 ];
 
 const pillars = [
@@ -160,24 +144,24 @@ export default function AboutPage() {
                 <span className="text-[var(--green-primary)] italic">s ljudskim pristupom</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Obitelj Hrala ima više od 50 godina tradicije u dentalnoj medicini. Centar
-                dentalne medicine Hrala osnovan je 2002. godine u zagrebačkoj Dubravi, pod
-                vodstvom Mr.sc. Zvonimira Hrale — nastavitelja dugogodišnje obiteljske
-                predanosti stomatologiji.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Naša misija od samog je početka bila jednostavna — pružiti pacijentima
-                vrhunsku stomatološku skrb u ugodnom i modernom okruženju, bez straha i
-                bez kompromisa u kvaliteti. Prijatan i opušten pristup prema pacijentima
-                kombiniramo s visokom stručnošću i uslužnošću cijelog našeg dentalnog tima.
+                Prijateljski i opušten odnos prema pacijentima, te visoka stručnost i ljubaznost
+                našeg stomatološkog tima garancija su za uspjeh i velik broj zadovoljnih pacijenata.
+                Trudimo se biti u skladu sa razvojem i napretkom struke kroz stalne edukacije i
+                stručna usavršavanja. Kod nas možete obaviti sve usluge na jednom mjestu, a cilj nam
+                je podignuti kvalitetu vašeg života te učiniti vaš osmijeh zdravijim i ljepšim nego ikad.
+                Timskim radom i individualnim pristupom prema svakom pacijentu trudimo se pružiti
+                najbolju moguću uslugu.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Kontinuiranim stručnim usavršavanjem i praćenjem suvremenih dostignuća
-                dentalne medicine jamčimo vam uvijek najkvalitetniju uslugu — od
-                jednostavnog pregleda do složenih implantoloških zahvata i estetike lica.
+                Više od 50 godina obiteljske tradicije krasi našu ordinaciju, a od 2002. godine
+                locirana je u Zagrebačkoj Dubravi u vlasništvu Zvonimira Hrale. U Centru dentalne
+                medicine Hrala možete obaviti sve vrste stomatoloških usluga, a uz uljepšavanje
+                vašeg osmijeha bavimo se i estetikom lica. Posjetite nas u ugodnom i modernom
+                ambijentu naše ordinacije, upoznajte naš tim, a mi ćemo se potruditi opravdati
+                vaše povjerenje koje ste nam ukazali svojim dolaskom.
               </p>
               <a href="/#contact" className="btn-primary">
-                Zakažite termin <ArrowRight size={16} />
+                Dogovorite termin <ArrowRight size={16} />
               </a>
             </div>
           </div>
@@ -278,33 +262,49 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {teamMembers.map((member, i) => (
-              <div
-                key={member.name}
-                className={`reveal delay-${Math.min(i * 100 + 100, 500)} group`}
-              >
-                <div className="img-zoom overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
-                  <img
-                    src={member.imgUrl}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top"
-                  />
+          {/* Doctors */}
+          <div className="mb-12">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">
+              Doktori dentalne medicine
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {doctors.map((member, i) => (
+                <div key={member.name} className={`reveal delay-${Math.min(i * 100 + 100, 500)} group`}>
+                  <div className="img-zoom overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                    <img src={member.imgUrl} alt={member.name} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="border-l-2 border-[var(--green-primary)] pl-4">
+                    <p className="font-serif text-base text-[var(--charcoal)] mb-0.5 leading-snug" style={{ fontFamily: "var(--font-cormorant)" }}>
+                      {member.name}
+                    </p>
+                    <p className="text-[10px] text-[var(--green-primary)] uppercase tracking-wide font-medium">{member.role}</p>
+                    {member.title && <p className="text-[11px] text-gray-400 mt-0.5">{member.title}</p>}
+                  </div>
                 </div>
-                <div className="border-l-2 border-[var(--green-primary)] pl-4">
-                  <p
-                    className="font-serif text-base text-[var(--charcoal)] mb-0.5 leading-snug"
-                    style={{ fontFamily: "var(--font-cormorant)" }}
-                  >
-                    {member.name}
-                  </p>
-                  <p className="text-[10px] text-[var(--green-primary)] uppercase tracking-wide font-medium">
-                    {member.role}
-                  </p>
-                  <p className="text-[11px] text-gray-400 mt-0.5">{member.title}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Assistants */}
+          <div>
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">
+              Dentalni asistenti
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {assistants.map((member, i) => (
+                <div key={member.name} className={`reveal delay-${Math.min(i * 100 + 100, 500)} group`}>
+                  <div className="img-zoom overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                    <img src={member.imgUrl} alt={member.name} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="border-l-2 border-[var(--green-primary)] pl-4">
+                    <p className="font-serif text-base text-[var(--charcoal)] mb-0.5 leading-snug" style={{ fontFamily: "var(--font-cormorant)" }}>
+                      {member.name}
+                    </p>
+                    <p className="text-[10px] text-[var(--green-primary)] uppercase tracking-wide font-medium">{member.role}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -362,7 +362,7 @@ export default function AboutPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[var(--green-primary)] opacity-[0.07] blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative reveal">
-          <p className="section-label mb-5">Zakažite termin</p>
+          <p className="section-label mb-5">Dogovorite termin</p>
           <h2
             className="heading-serif text-white mb-6"
             style={{
@@ -379,7 +379,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="/#contact" className="btn-primary">
-              Zakažite termin <ArrowRight size={16} />
+              Dogovorite termin <ArrowRight size={16} />
             </a>
             <a
               href="tel:+38512916814"

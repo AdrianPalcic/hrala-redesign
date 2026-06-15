@@ -12,31 +12,21 @@ const pillars = [
   "Bezbolni tretmani uz modernu anesteziju",
 ];
 
-const teamMembers = [
-  {
-    name: "Dr. Hrala",
-    role: "Osnivač & Glavni stomatolog",
-    imgUrl:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80",
-  },
-  {
-    name: "Dr. Marija Kovač",
-    role: "Implantolog",
-    imgUrl:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80",
-  },
-  {
-    name: "Dr. Ivan Perić",
-    role: "Ortodont",
-    imgUrl:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80",
-  },
-  {
-    name: "Dr. Ana Blažević",
-    role: "Estetska stomatologija",
-    imgUrl:
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80",
-  },
+const doctors = [
+  { name: "Mr. sc. Zvonimir Hrala", role: "dr. med. dent.", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Karla Hrala", role: "dr. med. dent.", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Tea Zadravec", role: "dr. med. dent.", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Elizabeta Šarčević", role: "dr. med. dent.", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Bruno Štimac", role: "dr. med. dent.", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+];
+
+const assistants = [
+  { name: "Draženka Horvat", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Marta Radušić", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Marija Barišić", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Ana Berišić", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Jelena Ćuro", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
+  { name: "Mateo Deže", role: "Dentalni asistent", imgUrl: "https://placehold.co/400x480/e8f4ea/6aaa6a" },
 ];
 
 export default function About() {
@@ -117,14 +107,16 @@ export default function About() {
               <span className="text-[var(--green-primary)] italic">s ljudskim pristupom</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Centar dentalne medicine Hrala osnovan je s jednom misijom —
-              pružiti pacijentima vrhunsku stomatološku skrb u ugodnom i
-              modernom okruženju, bez straha i bez kompromisa u kvaliteti.
+              Prijateljski i opušten odnos prema pacijentima, te visoka stručnost i ljubaznost
+              našeg stomatološkog tima garancija su za uspjeh i velik broj zadovoljnih pacijenata.
+              Trudimo se biti u skladu sa razvojem i napretkom struke kroz stalne edukacije i
+              stručna usavršavanja.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Kroz više od dva desetljeća, naš tim stalno se educira i prati
-              najnovije trendove u dentalnoj medicini kako bi vam mogli ponuditi
-              samo ono najbolje. Vaše povjerenje je naša najveća nagrada.
+              Više od 50 godina obiteljske tradicije krasi našu ordinaciju, a od 2002. godine
+              locirana je u Zagrebačkoj Dubravi u vlasništvu Zvonimira Hrale. Posjetite nas u
+              ugodnom i modernom ambijentu naše ordinacije, upoznajte naš tim, a mi ćemo se
+              potruditi opravdati vaše povjerenje koje ste nam ukazali svojim dolaskom.
             </p>
 
             {/* Pillars */}
@@ -163,32 +155,48 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member, i) => (
-              <div
-                key={member.name}
-                className={`reveal delay-${i * 100 + 100} group`}
-              >
-                <div className="img-zoom h-72 overflow-hidden mb-4 bg-gray-100">
-                  <img
-                    src={member.imgUrl}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top"
-                  />
+          {/* Doctors */}
+          <div className="mb-12">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">
+              Doktori dentalne medicine
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {doctors.map((member, i) => (
+                <div key={member.name} className={`reveal delay-${i * 100 + 100} group`}>
+                  <div className="img-zoom h-64 overflow-hidden mb-4 bg-gray-100">
+                    <img src={member.imgUrl} alt={member.name} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="border-l-2 border-[var(--green-primary)] pl-4">
+                    <p className="font-serif text-base text-[var(--charcoal)] mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>
+                      {member.name}
+                    </p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wide">{member.role}</p>
+                  </div>
                 </div>
-                <div className="border-l-2 border-[var(--green-primary)] pl-4">
-                  <p
-                    className="font-serif text-lg text-[var(--charcoal)] mb-0.5"
-                    style={{ fontFamily: "var(--font-cormorant)" }}
-                  >
-                    {member.name}
-                  </p>
-                  <p className="text-xs text-gray-500 uppercase tracking-wide">
-                    {member.role}
-                  </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Assistants */}
+          <div>
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-6 pb-3 border-b border-gray-200">
+              Dentalni asistenti
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {assistants.map((member, i) => (
+                <div key={member.name} className={`reveal delay-${i * 100 + 100} group`}>
+                  <div className="img-zoom h-64 overflow-hidden mb-4 bg-gray-100">
+                    <img src={member.imgUrl} alt={member.name} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="border-l-2 border-[var(--green-primary)] pl-4">
+                    <p className="font-serif text-base text-[var(--charcoal)] mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>
+                      {member.name}
+                    </p>
+                    <p className="text-xs text-gray-500 uppercase tracking-wide">{member.role}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

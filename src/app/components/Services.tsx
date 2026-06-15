@@ -9,7 +9,7 @@ const services = [
     number: "01",
     title: "Estetska stomatologija",
     description:
-      "Ostvarite osmijeh koji ste uvijek željeli uz bijeljenje zuba, ljuskice, kompozitne ispune i cjelovitu estetsku obnovu.",
+      "Ostvarite osmijeh koji ste uvijek željeli uz izbjeljivanje zuba, ljuskice, kompozitne ispune i cjelovitu estetsku obnovu.",
     imgUrl:
       "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
   },
@@ -18,7 +18,7 @@ const services = [
     number: "02",
     title: "Implantologija",
     description:
-      "Zamjena izgubljenih zuba implantima koji izgledaju i osjećaju se kao prirodni zubi, uz dugotrajne rezultate.",
+      "Nadoknada izgubljenih zuba implantatima uz dugotrajne rezultate.",
     imgUrl:
       "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
   },
@@ -81,7 +81,7 @@ const services = [
     number: "09",
     title: "Ortodoncija",
     description:
-      "Fiksni aparatić, Invisalign i reteneri za ravne zube i pravilan ugriz u svakoj dobi.",
+      "Fiksna ili mobilna ortodoncija za svaku dob.",
     imgUrl:
       "https://images.unsplash.com/photo-1601333155159-9bf0e00ea7ce?w=800&q=80",
   },
@@ -129,7 +129,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="reveal delay-200 text-gray-500 max-w-sm leading-relaxed lg:text-right">
-            Naš tim specijalista pruža cjelovitu stomatološku i estetsku skrb uz
+            Naš tim pruža cjelovitu stomatološku i estetsku skrb uz
             najsuvremeniju tehnologiju i individualan pristup svakom pacijentu.
           </p>
         </div>
@@ -194,7 +194,7 @@ export default function Services() {
               className="heading-serif text-[var(--charcoal)] text-3xl"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
-              Zakažite konzultacije – besplatno.
+              Dogovorite konzultacije
             </h3>
           </div>
           <a href="#contact" className="btn-primary reveal delay-200 flex-shrink-0">

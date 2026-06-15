@@ -288,7 +288,7 @@ export default function ServicesPage() {
                 href="/kontakt"
                 className="inline-flex items-center gap-1.5 bg-[var(--green-primary)] text-white px-4 py-2 text-[11px] font-medium uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
               >
-                Zakažite termin <ArrowRight size={12} />
+                Dogovorite termin <ArrowRight size={12} />
               </Link>
             </div>
           </div>
@@ -396,7 +396,7 @@ export default function ServicesPage() {
 
                     <div className="flex items-center gap-4">
                       <Link href="/kontakt" className="btn-primary text-sm py-3.5 px-6">
-                        Zakažite termin <ArrowRight size={15} />
+                        Dogovorite termin <ArrowRight size={15} />
                       </Link>
                       <a
                         href="tel:+38512916814"
